@@ -13,6 +13,8 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Background from "./images/dark-blue-background.jpg"
+
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -33,11 +35,17 @@ if (localStorage.jwtToken) {
   }
 }
 
+const backStyle = {
+  width: "100%",
+  height: "100%",
+  backgroundImage: `url(${Background})`
+}
+
 function App() {
   return (
     <Provider store={store}>
     <Router>
-    <div className="App">
+    <div className="App" style={backStyle}>
       <Navbar />
       <Route exact path="/" component={Landing} />
       <Route exact path="/register" component={Register} />

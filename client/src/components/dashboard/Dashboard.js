@@ -13,9 +13,9 @@ return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>
+            <h4 style={{color:"white"}}> 
               <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
+              <p className="flow-text white-text text-darken-1">
                 Welcome to {" "}
                 <span style={{ fontFamily: "monospace" }}>Clairvoyance</span>  👏
               </p>

@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import { BrowserRouter, Link, Router, Route } from "react-router-dom";
+
 class Landing extends Component {
   render() {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>
+            <h4 style={{color: "white"}}>
               <b>Find</b> your {" "}
-              <span style={{ fontFamily: "monospace" }}>PATH</span> to your dream job
+              <span style={{ fontFamily: "monospace"}}>PATH</span> to your dream job
             </h4>
-            <p className="flow-text grey-text text-darken-1">
+            <p className="flow-text white-text text-darken-1">
               Want to get into tech? Want to land that software engineer job? Want to work at Google? We'll give you the path to success
             </p>
             <br />
