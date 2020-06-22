@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import Card from "../cards/Card"
+import "./dashboard.css"
+
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -10,16 +13,16 @@ class Dashboard extends Component {
 render() {
     const { user } = this.props.auth;
 return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{ height: "75vh"}} className="container">
         <div className="row">
-          <div className="col s12 center-align">
-            <h4 style={{color:"white"}}> 
+          <div className="col s12 right-align">
+            <h6 style={{color:"white"}}> 
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text white-text text-darken-1">
                 Welcome to {" "}
                 <span style={{ fontFamily: "monospace" }}>Clairvoyance</span>  👏
               </p>
-            </h4>
+            </h6>
             <button
               style={{
                 width: "150px",
@@ -33,6 +36,11 @@ return (
               Logout
             </button>
           </div>
+        </div>
+        <div className="row">
+        <div className="col s12 left-align">
+            <Card />
+        </div>
         </div>
       </div>
     );
